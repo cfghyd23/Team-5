@@ -1,0 +1,14 @@
+.container {
+    margin-top: 80px; /* Adjust this value to leave space for the navbar */
+  }
+  
+  .card {
+    margin-bottom: 20px; /* Add space between the cards */
+  }
+  
+  @media (max-width: 576px) {
+    .card {
+      margin-bottom: 40px; /* Increase space between cards on small screens */
+    }
+  }
+  

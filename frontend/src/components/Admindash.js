@@ -1,6 +1,6 @@
 
 import React from 'react';
-
+import './css/Admindash.css';
 function Admindash() {
     function CardRow() {
         function Card({ imageSrc, cardTitle, progress }) {
