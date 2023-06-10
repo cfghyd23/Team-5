@@ -1,7 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcrypt");//for password hashing
 
-const jwt = require("jsonwebtoken");
 const User = require("../models/internModel");//for userAvailable...to check from db
 
 //@desc Register a user
@@ -50,18 +49,7 @@ const loginUser = asyncHandler(async (req, res) => {
     const user = await User.findOne({ email });//to find user
     //2nd param to compare password with hashedpassword
     if (user && (await bcrypt.compare(password, user.password))) {
-        const accessToken = jwt.sign(
-            {
-                user: {  //payload data
-                    username: user.username,
-                    email: user.email,
-                    id: user.id,
-                },
-            },
-            process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn: "15m" }
-        );
-        res.status(200).json({ accessToken });
+        res.status(200).json({ message: "successfully logged in" });
     } else {
         res.status(401);
         throw new Error("email or password is not valid");
