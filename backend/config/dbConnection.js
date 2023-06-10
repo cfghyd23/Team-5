@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
-const CONNECTION_STRING = "mongodb+srv://cfgteam5:letswin@cluster10.chrhucb.mongodb.net/CodeForGood?retryWrites=true&w=majority"
+require("dotenv").config()
+//const CONNECTION_STRING = "mongodb+srv://cfgteam5:letswin@cluster10.chrhucb.mongodb.net/CodeForGood?retryWrites=true&w=majority"
 
 const connectDb = async () => {
-        mongoose.connect(CONNECTION_STRING, {
+        mongoose.connect(process.env.CONNECTION_STRING, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
