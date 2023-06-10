@@ -1,0 +1,138 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase&family=Lato:ital@1&family=Lora:ital@1&display=swap'); */
+nav *{
+	list-style: none;
+}
+.nav{
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	position: fixed;
+	left: 0;
+	top: 0px;
+	width:100%;
+    background-color: transparent;
+    transition: 0.6s ease-in-out;
+    z-index: 999;
+    list-style: none;
+	height: 15vh;
+}
+.nav-active{
+	/* box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.157); */
+    /* display: flex; */
+	/* justify-content: flex-end; */
+	/* align-items: center; */
+	position: fixed;
+	left: 0;
+	top: 0px;
+	width:100%;
+    z-index: 999;
+    /* transition: 0.6s ease-in-out; */
+	background-color: #fcf7f1;
+	height: 15vh;
+
+}
+.nav-active ul li a {
+	color: black;
+}
+nav ul{
+	display: flex;
+    list-style-type: none;
+}
+/* .active{
+    background-color: #437EF4;
+    color:#ffffff;
+	box-shadow: 5px 10px 30px #437EF4;
+	transition: all ease 0.2s;
+}
+.active:hover{
+    background-color: #000000;
+    color:#ffffff;
+	box-shadow: 5px 10px 30px #437EF4;
+	transition: all ease 0.2s;
+} */
+nav ul li a{
+    font-family: 'Cormorant Unicase', serif;
+	height:40px;
+	line-height: 43px;
+	margin: 3px !important;
+	padding: 0rem 2rem;
+	/* display: flex; */
+	font-size: 1.2rem;
+	font-weight: 600;
+	color:#676767;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+	padding: 1vh 1vw;
+	margin: 0px 0.5vw !important;
+}
+nav ul li:hover a{
+    color:green !important;
+}
+nav ul .logo-link:hover:after {
+	background-color: transparent;
+}
+nav ul li:after {
+	position: relative;
+	bottom: 10px;
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+  }
+nav ul  li:hover:after {
+	width: 30%;
+	background: green;
+  }
+nav .menu-btn,
+.menu-icon{
+		display:none;
+	}
+
+ul.menu{
+    width: 100%;
+	height: 7vh;
+	padding: 0px;
+	position: relative;
+	top: 2vh;
+}   
+
+/* ul.menu > * {
+    flex-grow:1 ;
+} */
+
+/* .logo{
+    transform: scale(3);
+} */
+
+nav ul {
+    /* display: flex; */
+    list-style-type: none;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+}
+.nav-links{
+    
+    flex-direction: row;
+}
+.logo-container{
+	/* flex: 1 1 auto; */
+	align-content: center;
+	flex-basis: 15%;
+}
+.nav-links{
+	/* flex: 1 1 auto; */
+	flex-basis: 18%;
+}
+.logo:hover{
+	background-color: transparent;
+}
+
+.nav-links li {
+	align-self: center;
+}

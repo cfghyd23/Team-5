@@ -1,11 +1,10 @@
 const mongoose =require('mongoose')
-
+require("dotenv").config()
 const Mongoose =require('mongoose').Mongoose
 const instance1= new Mongoose()
 
 const schema =mongoose.Schema
-const CONNECTION_STRING = "mongodb+srv://cfgteam5:letswin@cluster10.chrhucb.mongodb.net/CodeForGood?retryWrites=true&w=majority"
-const connect = instance1.connect(CONNECTION_STRING)
+const connect = instance1.connect(process.env.CONNECTION_STRING)
 
 const adminSchema = new schema({
     name:{
@@ -30,6 +29,6 @@ const adminSchema = new schema({
     }
 })
 
-var Admin = instance2.model('Admin' , adminSchema)
+var Admin = instance1.model('Admin' , adminSchema)
 
 module.exports =Admin
