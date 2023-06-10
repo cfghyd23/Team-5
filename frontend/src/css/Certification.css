@@ -1,0 +1,36 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  .certificate {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #ffffff;
+    background-image: url('https://media.istockphoto.com/id/1323907633/vector/light-yellow-watermark-waves-of-subtle-lines-net-pattern-guilloche-flowing-squiggle-curves.jpg?s=612x612&w=0&k=20&c=KzfzN8YbkyN9fKzKLe0N_zmnbn1IPGKSXqpOZ_AXZwo=');
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .btn {
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
