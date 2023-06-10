@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const internSchema = mongoose.Schema(
     {
-        user_id: {
+        intern_id: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,
             ref: "intern",
@@ -28,6 +28,18 @@ const internSchema = mongoose.Schema(
             ref: "causes",
 
         },
+        joiningDate: {
+            type: Date,
+            required: true,
+        },
+        endDate: {
+            type: Date,
+            required: true,
+        },
+        perk_ids: {
+            type: [mongoose.Schema.Types.ObjectId],
+            ref: "perks",
+        }
     },
     {
         timestamps: true,
