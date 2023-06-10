@@ -64,9 +64,10 @@ const Login= () =>{
           </button>
         </div>
         <p className="forgot-password text-right">
-        Create Account <a href="/sign-up">signup</a>
+        Create Account <a href="/sign-up"> signup</a>
         </p>
       </form>
     )
   }
   export default Login;
+
