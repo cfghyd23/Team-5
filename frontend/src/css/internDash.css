@@ -1,0 +1,112 @@
+.box{
+    display: flex;
+    margin-top: 18vh !important;
+    justify-content: space-evenly;
+    
+}
+
+.user-profile {
+    position: relative;
+    background-color: #f9f9f9;
+    padding: 10vh;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    max-width: 500px;
+  }
+
+.notification-panel {
+    position: relative;
+    background-color: #f9f9f9;
+    width: 100vh;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    max-width: 600px;
+    max-height: 50%;
+  }
+
+.user-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+
+  .user-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .notification-panel h3 {
+    margin-top: 2vh;
+    font-size: 18px;
+  }
+  
+  .notification-panel ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .notification-panel li {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  p {
+    margin-bottom: 2px;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  
+  li {
+    margin-bottom: 8px;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar__fill {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s ease-in-out;
+  }
+
+
+  
+  @media (max-width: 600px) {
+    .user-profile {
+      max-width: 100%;
+      margin: 0 10px;
+    }
+  }
+  
