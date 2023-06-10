@@ -1,7 +1,7 @@
 const express = require("express");//header of express
 //const dotenv = require("dotenv").config;
 const connectDb = require("./config/dbConnection");
-//connectDb();
+connectDb();
 const app = express();
 //const errorHandler = require("./middleware/errorHandler");
 const port = 5000;//creater server on port 5000
