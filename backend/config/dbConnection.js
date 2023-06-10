@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
-require("dotenv").config()
-//const CONNECTION_STRING = "mongodb+srv://cfgteam5:letswin@cluster10.chrhucb.mongodb.net/CodeForGood?retryWrites=true&w=majority"
+require("dotenv").config()  
 
 const connectDb = async () => {
         mongoose.connect(process.env.CONNECTION_STRING, {
