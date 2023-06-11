@@ -6,39 +6,37 @@ const bodyparser = require('body-parser')
 const CauseModel = require('../models/causes')
 const InternModel = require('../models/internModel');
 const  mongoose  = require("mongoose");
+const { v4: uuidv4 } = require('uuid');
 //@desc Register a user
 //@route POST /api/users/register
 //@access public
+const data = require('../server')
+
+
+
 const registerUser = asyncHandler(async (req, res) => {
-    const { username, email, password } = req.body;
+    console.log(req.body)
+    const { username,
+        email,
+        dob,
+        mobile,
+        address,
+        password,
+        confirmPassword } = req.body;
+        const userId = uuidv4();
+        console.log(userId);
+    
     if (!username || !email || !password) {
         res.status(400);
         throw new Error("All fields are mandatory!");
     }
-    const userAvailable = await User.findOne({ email });//findOne to find user
-    if (userAvailable) {
-        res.status(400);
-        throw new Error("User already registered!");
-    }
-
+    //findOne to find user
     //Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
     console.log("Hashed Password: ", hashedPassword);
-    const user = await User.create({
-        username,
-        email,
-        password: hashedPassword,
-    });
-
-    console.log(`User created ${user}`);
-    if (user) {
-        res.status(201).json({ _id: user.id, email: user.email });
-    } else {
-        res.status(400);
-        throw new Error("User data is not valid");
-    }
-    res.json({ message: "Register the user" });
-});
+    res.status(201).json({ msg:"Register the user", _id: userId, email: email });
+    InternModel.create({intern_id:userId,name:username , email:email , password:hashedPassword ,phone:mobile,DOB:dob})
+ });
 
 //@desc Login user
 //@route POST /api/users/login
@@ -52,7 +50,8 @@ const loginUser = asyncHandler(async (req, res) => {
     const user = await User.findOne({ email });//to find user
     //2nd param to compare password with hashedpassword
     if (user && (await bcrypt.compare(password, user.password))) {
-        res.status(200).json({ message: "successfully logged in" });
+        const intern = InternModel.find({email:email})
+        res.status(200).send({ interns:data ,name:intern.name ,email:email  , message: "success" });
     } else {
         res.status(401);
         throw new Error("email or password is not valid");
@@ -68,4 +67,4 @@ const currentUser = asyncHandler(async (req, res) => {
 
 
 
-module.exports = { registerUser, loginUser, currentUser ,dashboardData};
+module.exports = { registerUser, loginUser, currentUser};

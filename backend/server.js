@@ -56,9 +56,9 @@ const sendMail = async (options) => {
 };
 
 const data = [
-    { cause: 'Cause 1', threshold: 100, curProg: 20 },
-    { cause: 'Cause 2', threshold: 200, curProg: 55 },
-    { cause: 'Cause 3', threshold: 300, curProg: 95 },
+    { cause: 'Poverty', threshold: 100, curProg: 20,name: 'Sathwik' },
+    // { cause: 'Cause 2', threshold: 200, curProg: 55 },
+    // { cause: 'Cause 3', threshold: 300, curProg: 95 },
   ];
 //   app.use(
 //     cors({
@@ -95,3 +95,5 @@ app.post("/submit", (req, res) => {
         // return next(new ErrorHandler(error.message, 500));
       }
 })
+
+module.exports = data

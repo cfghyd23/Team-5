@@ -68,7 +68,7 @@ const Signup= () =>{
   };
 
   const handlesignup = () => {
-    Axios.post("http://localhost:5000/register", {
+    Axios.post("http://localhost:5000/intern/register", {
       username: username, 
       email: email,
       dob:dob,
@@ -78,6 +78,7 @@ const Signup= () =>{
       confirmPassword: confirmPassword,
   }).then((response) => {
     console.log(response.data.message);
+    navigate('/login')
   });
   };
   

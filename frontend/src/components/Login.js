@@ -2,15 +2,26 @@ import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
 import "../css/Login.css"
 import Axios from 'axios'
-
 const Login= () =>{
 
   const navigate = useNavigate();
+  
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
   
+
+  function Handlesuccess (response) {
+    navigate('/internDash')
+    const users = response.data.interns
+    users.map((obj)=>{
+      if(obj.name===response.data.name){
+        setEmail(response.data.email)
+        setEmail(response.data.email)
+      }
+    })
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -36,11 +47,14 @@ const Login= () =>{
   };
 
   const handleLogin = () => {
-    Axios.post("http://localhost:5000/login", { 
+    Axios.post("http://localhost:5000/intern/login", { 
       email: email,
       password: password,
   }).then((response) => {
-    console.log(response.data.message);
+    console.log(response)
+    if(response.data.message==="success"){
+       Handlesuccess(response);
+    }
   });
   };
 

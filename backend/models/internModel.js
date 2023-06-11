@@ -9,7 +9,7 @@ const connect = instance2.connect(process.env.CONNECTION_STRING)
 const internSchema = mongoose.Schema(
     {
         intern_id: {
-            type: Number,
+            type: String,
             required: true,
         },
         name: {

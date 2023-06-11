@@ -2,8 +2,7 @@ const express = require("express");
 const {
     registerUser,
     currentUser,
-    loginUser,
-    dashboardData,
+    loginUser
 } = require("../controllers/internController");
 
 const router = express.Router();
