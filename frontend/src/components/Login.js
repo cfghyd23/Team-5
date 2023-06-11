@@ -14,13 +14,7 @@ const Login= () =>{
 
   function Handlesuccess (response) {
     navigate('/internDash')
-    const users = response.data.interns
-    users.map((obj)=>{
-      if(obj.name===response.data.name){
-        setEmail(response.data.email)
-        setEmail(response.data.email)
-      }
-    })
+
   }
   const handleSubmit = (event) => {
     event.preventDefault();

@@ -1,12 +1,14 @@
 import React from "react";
+import "../css/Orientation.css"
+
 
 function Orientation() {
 
     const handleFetchLink = ()=>{
-
+        window.open("https://meet.google.com/lookup/br7f3z5hjw?authuser=1&hs=179")
     }
     return ( 
-        
+        <div className="main">
             <div className="card mx-auto mt-5 mb-4 orient" style={{ width: "75%" }}>
       <div className="card-body">
         <h5 className="card-title text-center">Welcome User!</h5>
@@ -28,7 +30,7 @@ function Orientation() {
       </div>
     </div>
         
-       
+    </div>
         
      );
 }

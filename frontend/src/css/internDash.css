@@ -55,7 +55,7 @@
   
   .notification-panel ul {
     list-style: none;
-    padding: 0;
+    padding: 20px;
   }
   
   .notification-panel li {
@@ -90,7 +90,7 @@
   .progress-bar {
     width: 100%;
     height: 10px;
-    background-color: #f2f2f2;
+    background-color: #f2f2f2 !important;
     border-radius: 5px;
     overflow: hidden;
   }

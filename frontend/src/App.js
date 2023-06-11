@@ -7,6 +7,8 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Admindash from './components/AdminDash';
 import Home from './components/Home';
+import Certificate from './components/Certification';
+import Orientation from './components/Orienation';
 
 function App() {
   return (
@@ -20,7 +22,8 @@ function App() {
             <Route exact path='/login' element={<Login />} ></Route>
             <Route exact path='/signup' element={<Signup />} ></Route>
             <Route exact path='/adminDash' element={<Admindash />} ></Route>
-            {/* <Route exact path='/Home' element={<Home/>} ></Route> */}
+            <Route exact path='/cert' element={<Certificate />} ></Route>
+            <Route exact path='/orient' element={<Orientation />} ></Route>
         </Routes>
     </Router>
     

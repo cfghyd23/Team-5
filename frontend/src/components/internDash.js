@@ -42,8 +42,8 @@ function InternDash() {
               </div>
             );
           };
-          console.log(data)
-          const progressPercentage = 20
+          // console.log(data[0].threshold)
+          const progressPercentage = 80
           const userData = {
             "email":user.email,
             "progress": progressPercentage
@@ -74,9 +74,7 @@ function InternDash() {
         <div className="notification-panel">
         <h3>ANNOUNCEMENTS</h3>
         <ul>
-          <li>Message 1</li>
-          <li>Message 2</li>
-          <li>Message 3</li>
+          <li>We are thrilled to announce an urgent volunteer meeting on [Date] at [Time]. Your presence is crucial as we will discuss new initiatives and upcoming projects that require your valuable contribution. </li>
         </ul>
         </div>
         </div>

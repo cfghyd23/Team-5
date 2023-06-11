@@ -60,12 +60,7 @@ const data = [
     // { cause: 'Cause 2', threshold: 200, curProg: 55 },
     // { cause: 'Cause 3', threshold: 300, curProg: 95 },
   ];
-//   app.use(
-//     cors({
-//       origin: "http://localhost:5000",
-//       credentials: true,
-//     }));
-  // Route to retrieve the dummy data
+
   app.get('/data', (req, res) => {
     res.json(data);
   });
@@ -76,13 +71,14 @@ app.listen(port, () => {
 
 app.post("/submit", (req, res) => {
     //save to db
+    if(req.body.progress == 20 || req.body.progress == 50 || req.body.progress==90 ){
     //email
     //sendEmail()
     try {
         sendMail({
           email: req.body.email,
-          subject: "Activate your Shop",
-          message: `Hello`
+          subject: `Hi you have raised ${req.body.progress}% funds`,
+          message: `Find Out how you can raise more funds funds to reach your ultimate goal with these tips.`
         //    ${seller.name}, please click on the link to activate your shop: ${activationUrl}`,
         });
         res.status(201).json({
@@ -94,6 +90,7 @@ app.post("/submit", (req, res) => {
         console.log(error)
         // return next(new ErrorHandler(error.message, 500));
       }
+    }
 })
 
 module.exports = data
