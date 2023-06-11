@@ -1,7 +1,7 @@
 import React, {usestate} from 'react'
 import {Link as Lnk} from 'react-router-dom'
 import {useState} from 'react'
-// import Logo from '../Images/Logo.png'
+import Logo from '../images/logo.png'
 import '../css/navbar.css'
 
 function Navbar() {
@@ -37,7 +37,7 @@ function Navbar() {
         <div className='nav-links'><li><Lnk to="/" >Home</Lnk></li></div>
         <div className='nav-links'><li><Lnk to="/search">Search</Lnk></li></div>
         <div className='logo-container'><li className='logo-link'><Lnk to='/' className="logo" >
-        {/* <img src={Logo} alt=''/> */}
+        <img src={Logo} alt=''/>
         </Lnk></li></div>
         <div className='nav-links'><li><Lnk to="/about" >About</Lnk></li></div>
         <div className='nav-links'><li><Lnk to="/contact" >Contact Us</Lnk></li></div>

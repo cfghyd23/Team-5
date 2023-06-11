@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/cfghyd23/Team-5#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
     "express": "^4.18.2",
-    "mongoose": "^7.2.3"
+    "mongoose": "^7.2.3",
+    "nodemailer": "^6.9.3"
   },
   "devDependencies": {
     "i": "^0.3.7",
