@@ -34,3 +34,5 @@ adminRouter.route("/cause/update")
     CauseModel.updateOne(req.body)
     res.send({status:200});
 })
+
+module.exports = adminRouter;

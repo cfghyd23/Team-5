@@ -42,8 +42,8 @@ function InternDash() {
               </div>
             );
           };
-          console.log(data)
-          const progressPercentage = 20
+          // console.log(data[0].threshold)
+          const progressPercentage = 80
           const userData = {
             "email":user.email,
             "progress": progressPercentage

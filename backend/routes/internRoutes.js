@@ -3,7 +3,6 @@ const {
     registerUser,
     currentUser,
     loginUser,
-    dashboardData,
 } = require("../controllers/internController");
 
 const router = express.Router();

@@ -34,13 +34,15 @@ function Navbar() {
     <span className="nav-icon"></span>
     </label>
     <ul className= "menu">
-        <div className='nav-links'><li><Lnk to="/" >Home</Lnk></li></div>
-        <div className='nav-links'><li><Lnk to="/search">Search</Lnk></li></div>
+        <div className='nav-links'><li><Lnk to="/internDash" >Intern</Lnk></li></div>
+        <div className='nav-links'><li><Lnk to="/adminDash" >Admin</Lnk></li></div>
+
         <div className='logo-container'><li className='logo-link'><Lnk to='/' className="logo" >
         <img src={Logo} alt=''/>
         </Lnk></li></div>
-        <div className='nav-links'><li><Lnk to="/about" >About</Lnk></li></div>
-        <div className='nav-links'><li><Lnk to="/contact" >Contact Us</Lnk></li></div>
+        <div className='nav-links'><li><Lnk to="/orient">Orientation</Lnk></li></div>
+
+        <div className='nav-links'><li><Lnk to="/cert" >Certificate</Lnk></li></div>
              
     </ul>
 

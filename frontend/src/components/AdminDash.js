@@ -1,6 +1,6 @@
-import '../css/AdminDash.css'
-import React from 'react';
 
+import React from 'react';
+import '../css/AdminDash.css';
 function Admindash() {
     function CardRow() {
         function Card({ imageSrc, cardTitle, progress }) {
@@ -50,7 +50,7 @@ function Admindash() {
           <div className="col-md-4">
             <Card
               imageSrc="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-03-1024x1024.png"
-              cardTitle="Good Health and Well Being"
+              cardTitle="Good Health & Well Being"
               const progress = {50}
             />
           </div>
@@ -58,7 +58,7 @@ function Admindash() {
       );
     }
     return (
-        <div>
+        <div className='main'>
         <CardRow />
         </div>
       );

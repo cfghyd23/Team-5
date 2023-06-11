@@ -68,4 +68,4 @@ const currentUser = asyncHandler(async (req, res) => {
 
 
 
-module.exports = { registerUser, loginUser, currentUser ,dashboardData};
+module.exports = { registerUser, loginUser, currentUser };

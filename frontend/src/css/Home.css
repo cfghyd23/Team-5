@@ -26,7 +26,8 @@ body {
     margin-bottom: 40px;
   }
   .buttons-con .action-link-wrap {
-    margin-top: 40px;
+    margin-top: 60vh;
+    position: relative;
   }
   .buttons-con .action-link-wrap a {
     background: #68c950;
