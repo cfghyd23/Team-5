@@ -1,13 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import '../css/internDash.css'
 import userImage from '../images/user.jpg'; // Replace with your user image path
+import Axios from 'axios'
 
 
 function InternDash() {
 
+    const [data, setData] = useState([]);
+   
+    // useEffect(() => {
+    //   fetchData();
+    // }, []);
+  
+    // const fetchData = async () => {
+    //   try {
+    //     const response = await fetch('http://localhost:5000/data');
+    //     const jsonData = await response.json();
+    //     setData(jsonData);
+    //   } catch (error) {
+    //     console.log('Error fetching data:', error);
+    //   }
+    // };
+    useEffect(()=>{
+        
+        Axios.get("http://localhost:5000/data").then((response) => {
+            console.log("hi",response.data)
+          setData(response.data)
+        })
+      }, [])
+
         const user = {
           name: 'John Doe',
-          email: 'johndoe@example.com',
+          email: 'nishanthsvamsi@gmail.com',
           cause: 'protection of the environment.',
         };
 
@@ -18,11 +42,20 @@ function InternDash() {
               </div>
             );
           };
+          // console.log(data[0].threshold)
+          const progressPercentage = 80
+          const userData = {
+            "email":user.email,
+            "progress": progressPercentage
+        }
 
-          const progressPercentage = 75;
+          Axios.post('http://localhost:5000/submit',userData).then((response)=>{
+            console.log(response)
+          })
 
   return (
-    <div className='box'>
+    <div>
+         <div className='box'>
         <div  className="user-profile">
             <div className="user-image">
                 <img src={userImage} alt="User" />
@@ -39,14 +72,13 @@ function InternDash() {
             </div>
         <div>
         <div className="notification-panel">
-        <h3>NOTIFICATIONS</h3>
+        <h3>ANNOUNCEMENTS</h3>
         <ul>
-          <li>Message 1</li>
-          <li>Message 2</li>
-          <li>Message 3</li>
+          <li>We are thrilled to announce an urgent volunteer meeting on [Date] at [Time]. Your presence is crucial as we will discuss new initiatives and upcoming projects that require your valuable contribution. </li>
         </ul>
         </div>
         </div>
+    </div>
     </div>
   )
 }
